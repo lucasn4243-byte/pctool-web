@@ -1,54 +1,284 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Publicité</title>
-
-  <!-- Script Google AdSense -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PC Tool - Logiciel gratuit de maintenance et optimisation Windows. Nettoyage, réparation système, création de clés USB bootables.">
+  <meta name="keywords" content="pc tool, maintenance pc, nettoyage windows, optimisation, gratuit">
+  <title>PC Tool - Logiciel de maintenance PC gratuit</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5069705947744325"
      crossorigin="anonymous"></script>
-
   <style>
-    body {
-      background-color: #f7f7f7;
-      font-family: Arial, sans-serif;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      line-height: 1.6; 
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    .container { 
+      max-width: 1000px; 
+      margin: 0 auto; 
+      padding: 20px;
+      background: white;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    header { 
+      background: linear-gradient(135deg, #0078D7 0%, #005a9e 100%);
+      color: white; 
+      padding: 40px 20px; 
+      text-align: center; 
+      border-radius: 10px 10px 0 0;
+    }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; opacity: 0.9; }
+    nav { 
+      background: #f8f9fa; 
+      padding: 15px; 
+      text-align: center; 
+      border-bottom: 3px solid #0078D7;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a { 
+      margin: 0 20px; 
+      color: #0078D7; 
+      text-decoration: none; 
+      font-weight: bold; 
+      transition: color 0.3s;
+      font-size: 1.1em;
+    }
+    nav a:hover { color: #005a9e; }
+    .content { 
+      padding: 40px 20px; 
+      background: white;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .feature-card {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 10px;
       text-align: center;
-      margin: 0;
-      padding: 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 2px solid #e9ecef;
     }
-    h1 {
-      background-color: #0078D7;
-      color: white;
-      padding: 10px 0;
-      margin: 0;
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,120,215,0.3);
     }
-    .ad {
-      margin: 30px auto;
-      padding: 15px;
-      background-color: #fff;
+    .feature-card h3 {
+      color: #0078D7;
+      margin: 15px 0;
+      font-size: 1.3em;
+    }
+    .ad-container { 
+      margin: 40px 0; 
+      padding: 20px; 
+      background: #f9f9f9; 
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      width: 90%;
-      max-width: 700px;
+      border: 1px solid #ddd;
+    }
+    .ad-label {
+      text-align: center;
+      color: #999;
+      font-size: 11px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .download-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #28a745 0%, #20803d 100%);
+      color: white;
+      padding: 15px 40px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(40,167,69,0.3);
+    }
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(40,167,69,0.4);
+    }
+    footer { 
+      background: #333; 
+      color: white; 
+      text-align: center; 
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+    footer a { color: #0078D7; text-decoration: none; }
+    .hero-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+    }
+    .stat-item h2 {
+      color: #0078D7;
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>💡 Soutenez PcTool</h1>
-  <div class="ad">
-    <p>Merci d’aider à financer le développement du projet 💙</p>
+  <div class="container">
+    <header>
+      <h1>🛠️ PC Tool</h1>
+      <p>Votre assistant gratuit pour la maintenance PC</p>
+    </header>
+    
+    <nav>
+      <a href="index.html">🏠 Accueil</a>
+      <a href="features.html">✨ Fonctionnalités</a>
+      <a href="download.html">📥 Télécharger</a>
+      <a href="support.html">💬 Support</a>
+      <a href="privacy.html">🔒 Confidentialité</a>
+    </nav>
+    
+    <div class="content">
+      <div class="hero-section">
+        <h2 style="font-size: 2em; color: #0078D7; margin-bottom: 20px;">Optimisez votre PC en quelques clics</h2>
+        <p style="font-size: 1.2em; color: #555; margin-bottom: 30px;">
+          PC Tool regroupe tous les outils essentiels pour maintenir votre ordinateur en parfait état de fonctionnement.
+        </p>
+        <a href="download.html" class="download-btn">📥 Télécharger gratuitement</a>
+      </div>
 
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5069705947744325"
-         data-ad-slot="8047029526"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+      <div class="stats">
+        <div class="stat-item">
+          <h2>10K+</h2>
+          <p>Utilisateurs actifs</p>
+        </div>
+        <div class="stat-item">
+          <h2>15+</h2>
+          <p>Outils intégrés</p>
+        </div>
+        <div class="stat-item">
+          <h2>100%</h2>
+          <p>Gratuit & Sans virus</p>
+        </div>
+      </div>
+
+      <div class="ad-container">
+        <p class="ad-label">Publicité</p>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5069705947744325"
+             data-ad-slot="8047029526"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <h2 style="text-align: center; color: #0078D7; margin: 40px 0; font-size: 2em;">Fonctionnalités principales</h2>
+      
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div style="font-size: 3em;">🧹</div>
+          <h3>Nettoyage intelligent</h3>
+          <p>Supprimez les fichiers temporaires, cache et données inutiles pour libérer de l'espace disque.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div style="font-size: 3em;">⚙️</div>
+          <h3>Registre optimisé</h3>
+          <p>Analysez et réparez les erreurs du registre Windows pour améliorer les performances.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div style="font-size: 3em;">🔑</div>
+          <h3>Clé USB bootable</h3>
+          <p>Créez facilement des clés USB d'installation Windows 10/11 en quelques clics.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div style="font-size: 3em;">🔧</div>
+          <h3>Réparation système</h3>
+          <p>Réparez les fichiers système corrompus avec DISM et SFC automatiquement.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div style="font-size: 3em;">💾</div>
+          <h3>Analyse de disque</h3>
+          <p>Vérifiez l'état de santé de vos disques durs et SSD avec SMART.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div style="font-size: 3em;">🛡️</div>
+          <h3>Anti-malware</h3>
+          <p>Scannez votre système à la recherche de menaces et mettez en quarantaine les fichiers suspects.</p>
+        </div>
+      </div>
+
+      <div style="background: #e8f5e9; padding: 30px; border-radius: 10px; margin: 40px 0; border-left: 5px solid #28a745;">
+        <h3 style="color: #28a745; margin-bottom: 15px;">✅ Pourquoi choisir PC Tool ?</h3>
+        <ul style="list-style: none; padding-left: 0;">
+          <li style="margin: 10px 0;">✔️ <strong>100% gratuit</strong> - Aucun frais caché, aucun abonnement</li>
+          <li style="margin: 10px 0;">✔️ <strong>Sans virus</strong> - Développé avec soin, testé et sécurisé</li>
+          <li style="margin: 10px 0;">✔️ <strong>Interface intuitive</strong> - Facile à utiliser même pour les débutants</li>
+          <li style="margin: 10px 0;">✔️ <strong>Mis à jour régulièrement</strong> - Nouvelles fonctionnalités ajoutées</li>
+          <li style="margin: 10px 0;">✔️ <strong>Support communautaire</strong> - Aide disponible si besoin</li>
+        </ul>
+      </div>
+
+      <div class="ad-container">
+        <p class="ad-label">Publicité</p>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5069705947744325"
+             data-ad-slot="8047029526"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <div style="text-align: center; margin: 60px 0;">
+        <h2 style="color: #0078D7; margin-bottom: 20px;">Prêt à optimiser votre PC ?</h2>
+        <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">
+          Rejoignez des milliers d'utilisateurs satisfaits
+        </p>
+        <a href="download.html" class="download-btn">📥 Télécharger PC Tool maintenant</a>
+      </div>
+    </div>
+    
+    <footer>
+      <p><strong>PC Tool</strong> - Logiciel de maintenance PC gratuit</p>
+      <p style="margin: 15px 0;">
+        <a href="index.html">Accueil</a> | 
+        <a href="features.html">Fonctionnalités</a> | 
+        <a href="download.html">Télécharger</a> | 
+        <a href="support.html">Support</a> | 
+        <a href="privacy.html">Confidentialité</a>
+      </p>
+      <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+        © 2025 PC Tool - Tous droits réservés
+      </p>
+    </footer>
   </div>
 </body>
 </html>
-
